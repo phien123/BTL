@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" type="text/css" href="canhan1.css">
+</head>
+<style>
+    table, td {
+        border-style: double;
+    }
+</style>
+<body>
+    <div id="header">
+        <img src="logo1.png" width="50" height="42">
+        <button class="func" a href="">Home</a></button>
+        <button class="func" a href="">About</a></button>
+        <button class="func" a href="">Contact</a></button>
+    </div>
+    <h2><b>GIỚI THIỆU BẢN THÂN</b></h2>
+    <div id="info">
+    <table>
+        <tr>
+            <td>Họ và tên</td>
+            <td>Đào Phương Hiền</td>
+        </tr>
+        <tr>
+            <td>Ngày tháng năm sinh</td>
+            <td>20/01/2005</td>
+        </tr>
+        <tr>
+            <td>Quê quán</td>
+            <td>Hà Nội</td>
+        </tr>
+        <tr>
+            <td>Trường học:</td>
+            <td>Trường Đại học Thủ đô Hà Nội</td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td>Xem phim, nấu ăn, đạp xe </td>
+        </tr>
+    </table>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="1.jpeg" style="width:280px; height:200px;"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="2.jpg"  style="width:280px; height:200px; margin-left: 65px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="3.jpg"  style="width:280px; height:200px; margin-left: 130px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="4.jpg"  style="width:280px; height:200px; margin-left: 195px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="5.jpg" style="width:280px; height:200px; margin-left: 260px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+          </div>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 5</div>
+            <img src="1.jpeg" style="width:850px; height:550px">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 5</div>
+            <img src="2.jpg" style="width:850px; height:550px">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 5</div>
+            <img src="3.jpg" style="width:850px; height:550px">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 5</div>
+            <img src="4.jpg" style="width:850px; height:550px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 5</div>
+            <img src="5.jpg" style="width:850px; height:550px">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+          <div class="column">
+            <img class="demo cursor" src="1.jpeg" style="width:130px; height:80px" onclick="currentSlide(1)" alt="Lăng Chủ tịch Hồ Chí Minh">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="2.jpg"  style="width:130px; height:80px" onclick="currentSlide(2)" alt="Hồ Hoàn Kiếm">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="3.jpg"  style="width:130px; height:80px" onclick="currentSlide(3)" alt="Văn Miếu Quốc Tử Giám">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="4.jpg"  style="width:130px; height:80px" onclick="currentSlide(4)" alt="Nhà tù Hoả Lò">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="5.jpg" style="width:130px; height:80px" onclick="currentSlide(5)" alt="Hoàng thành Thăng Long">
+          </div>
+        </div>
+      </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+<script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</html>

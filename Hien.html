@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" type="text/css" href="styleHien.css">
+</head>
+<body>
+    <header>
+        <div id="hero">
+            <h1 class="gradient">GIỚI THIỆU VỀ BẢN THÂN</h1>
+        </div>
+    </header>
+    <div id="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="nhom">
+                <button class="func"> <a href="#hero">Home</a></button>
+                <button class="func"> <a href="#about">About</a></button>
+                <button class="func"> <a href="#contact">Contact</a></button>
+            </div>
+        </div>
+    </div>
+   
+    <div id="about">
+    <h3><strong>About me</strong></h3>
+    <div class="info-row">
+      <i class="bi bi-1-circle-fill" style="margin-top: 50px"></i>
+      <span class="label" style="margin-top: 50px">Họ và tên:</span>
+      <span class="value">Đào Phương Hiền</span>
+  </div>
+  <div class="info-row">
+      <i class="bi bi-2-circle-fill"></i>
+      <span class="label">Ngày tháng năm sinh:</span>
+      <span class="value">20/01/2005</span>
+  </div>
+  <div class="info-row">
+      <i class="bi bi-3-circle-fill"></i>
+      <span class="label">Quê quán:</span>
+      <span class="value">Hà Nội</span>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="1.jpeg" style="width:280px; height:200px;"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="2.jpg"  style="width:280px; height:200px; margin-left: 65px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="3.jpg"  style="width:280px; height:200px; margin-left: 130px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="4.jpg"  style="width:280px; height:200px; margin-left: 195px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="5.jpg" style="width:280px; height:200px; margin-left: 260px;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      </div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="1.jpeg" style="width:850px; height:550px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="2.jpg" style="width:850px; height:550px">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="3.jpg" style="width:850px; height:550px">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="4.jpg" style="width:850px; height:550px">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="5.jpg" style="width:850px; height:550px">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <div class="column">
+        <img class="demo cursor" src="1.jpeg" style="width:130px; height:80px" onclick="currentSlide(1)" alt="Lăng Chủ tịch Hồ Chí Minh">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="2.jpg"  style="width:130px; height:80px" onclick="currentSlide(2)" alt="Hồ Hoàn Kiếm">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="3.jpg"  style="width:130px; height:80px" onclick="currentSlide(3)" alt="Văn Miếu Quốc Tử Giám">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="4.jpg"  style="width:130px; height:80px" onclick="currentSlide(4)" alt="Nhà tù Hoả Lò">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="5.jpg" style="width:130px; height:80px" onclick="currentSlide(5)" alt="Hoàng thành Thăng Long">
+      </div>
+    </div>
+  </div>
+  <div class="info-row">
+    <i class="bi bi-4-circle-fill"></i>
+    <span class="label">Trường học:</span>
+    <span class="value"><a href="https://hnmu.edu.vn" target="_blank">Trường Đại học Thủ đô Hà Nội</a></span>
+  </div>
+  <div class="info-row">
+    <i class="bi bi-5-circle-fill"></i>
+    <span class="label">Sở thích:</span>
+    <span class="value">Xem phim, nấu ăn</span>
+  </div>
+  <div class="info-row" style="margin-left:500px"> 
+    <img src="film.webp" alt="Watching films" width="270px" height="150px" class="like">
+    <img src="cook.jpg" alt="Cooking" wwidth="300px" height="150px" class="like">
+  </div>
+</div>
+<div id="contact">
+  <span><strong>Contact me</strong></span>
+  <a href="https://www.facebook.com/profile.php?id=100082290252631&mibextid=LQQJ4d" target="_blank"><i class="bi bi-facebook"  style="margin-left: 35px"></i></a>
+  <a href="https://www.instagram.com/hien.0011/profilecard/?igsh=MTBweXk3ZDhveWt3Nw== "target="_blank"><i class="bi bi-instagram" style="margin-left: 25px"></i></a>
+  <a href="mailto:nguyenthuytrang210705@gmail.com" target="_blank"><i class="bi bi-envelope" style="margin-left: 25px"></i></a>
+</div>
+<a href="index.html" style=" text-decoration-line: none; font-size: 30px; color: black;margin-top: auto; display: flex; justify-content: flex-end; margin-right: 30px;"><i class="bi bi-arrow-left-square-fill"></i></a> 
+<footer>
+  <p>© 2024 Designer. All rights reserved.</p>
+</footer>
+</body>
+<script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+</html>

@@ -1,0 +1,127 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.png'); /* Thay 'background.jpg' bằng đường dẫn đến hình ảnh của bạn */
+    background-size: cover; /* Đảm bảo hình nền phủ toàn bộ trang */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #090808;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.about-me {
+    margin: 30px 0;
+}
+
+.intro {
+    display: flex;
+    align-items: center; /* Đặt ảnh và nội dung cùng hàng và căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Đưa ảnh sát bên trái */
+}
+
+.avatar {
+    width: 400px; /* Kích thước lớn hơn */
+    height: 400px; /* Kích thước lớn hơn */
+    border: 5px solid rgba(255, 255, 255, 0.897);
+    object-fit: cover; /* Giữ cho ảnh luôn vừa khít trong khung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho ảnh */
+    margin-right: 20px; /* Khoảng cách giữa ảnh và phần nội dung */
+    margin-top: 30px;
+}
+
+.intro-text {
+    max-width: 700px; /* Giới hạn độ rộng của nội dung */
+    text-align: left; /* Căn trái cho phần giới thiệu */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng với độ trong suốt */
+    border-radius: 15px; /* Bo tròn góc */
+    padding: 30px; /* Khoảng cách bên trong */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng cho khung nội dung */
+    margin-top: 30px;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px; /* Thêm khoảng cách dưới tiêu đề */
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px; /* Thêm khoảng cách giữa các đoạn văn */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+}
+
+.social-links {
+    margin: 50px 0;
+}
+
+.social-links h3 {
+    font-size: 1.8em;
+    color: rgb(169, 107, 117);
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    padding: 15px 30px;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.facebook {
+    background-color: #00b7ff;
+}
+
+.tiktok {
+    background-color: #000000;
+}
+
+.instagram {
+    background-color: #ff0090;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 0.9em;
+}
+.intro-text p:last-child {
+    margin-bottom: 0; /* Bỏ khoảng cách cuối cùng */
+}
